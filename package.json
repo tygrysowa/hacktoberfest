@@ -4,8 +4,9 @@
   "description": "",
   "scripts": {
     "clean": "rm -r dist/",
-    "start": "parcel src/index.pug",
-    "build": "parcel build src/index.pug"
+    "serve": "parcel src/index.pug",
+    "build": "parcel build src/index.pug --no-source-maps",
+    "build-dev": "parcel build src/index.pug --no-minify"
   },
   "keywords": [],
   "author": "Grzegorz Kupczyk",

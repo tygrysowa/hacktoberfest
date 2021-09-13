@@ -5,18 +5,25 @@
 First install dependencies:
 
 ```sh
-npm install
+🐧 npm install
 ```
 
 To run in hot module reloading mode:
 
 ```sh
-npm start
+🐧 npm run serve
 ```
 
 To create a production build in `dist` directory:
 
 ```sh
-npm run clean # make sure that dist is empty or do not exists
-npm run build
+🐧 npm run clean # make sure that dist is empty or do not exists
+🐧 npm run build
+```
+
+To create a development build in `dist` directory:
+
+```sh 
+🐧 npm run clean
+🐧 NODE_ENV=development npm run build-dev
 ```
