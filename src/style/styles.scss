@@ -19,3 +19,11 @@ h1 {
   margin-bottom: 1em;
   max-width: 300px;
 }
+
+a, a:visited {
+  color: $primary-accent-color;
+  
+  &:hover{
+    color: $secondary-accent-color
+  }
+}
