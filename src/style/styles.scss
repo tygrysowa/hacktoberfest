@@ -7,8 +7,15 @@ html {
 
 body{
   background-color: $tertiary-accent-color;
+  text-align: center;
 }
 
 h1 {
   color: $primary-color;
+}
+
+.mainLogo {
+  margin-top: 3em;
+  margin-bottom: 1em;
+  max-width: 300px;
 }
