@@ -1,15 +1,6 @@
-doctype html
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    link(rel="stylesheet", type="text/css", href="/style/styles.scss")
+extends _layout
 
-
-    title Hacktoberfest 2021
-  body
-    img.mainLogo(src="/assets/img/logo-hacktoberfest.svg", alt="Logo Hacktoberfest")
-    h1 Yo Hackers!
-    a(href="hs.pug") See the second page
-    script(src="/js/index.js")
+block content
+  h1 Yo Hackers!
+  a(href="hs.pug") See the second page
+  script(src="/js/index.js")
