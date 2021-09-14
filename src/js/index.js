@@ -1,2 +1,1 @@
-import "/style/styles.scss";
-console.log("hello world!");
+console.log("Yo Hackers!");

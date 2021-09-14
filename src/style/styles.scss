@@ -1,6 +1,9 @@
-$primary-color: white;
-$bg: black;
+@import "variables.scss";
+
+body{
+  background-color: $tertiary-accent-color;
+}
+
 h1 {
   color: $primary-color;
-  background-color: $bg;
 }
