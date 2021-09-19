@@ -1,5 +1,6 @@
 html {
   font-family: 'Poppins', sans-serif;
+  font-size: $text-size;
 }
 
 body {
@@ -24,4 +25,8 @@ a:visited {
   &:hover {
     color: $secondary-accent-color;
   }
+}
+
+section {
+  @include padding;
 }

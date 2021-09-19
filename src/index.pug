@@ -1,6 +1,11 @@
 extends ./pug/_layout
 
-block content
-  h1 Yo Hackers!
-  a(href="./pug/hs.pug") See the second page
+block content 
+  include pug/sections/_header
+  main 
+    include pug/sections/_hero 
+    include pug/sections/_about
+    include pug/sections/_events 
+    include pug/sections/_partners   
+  include pug/sections/_footer
   script(src="/js/index.js")

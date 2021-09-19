@@ -1,0 +1,20 @@
+@mixin flex {
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: $min-md) {
+    flex-direction: row;
+  }
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin padding {
+  padding: calc(20px + 5vw);
+
+  @media screen and (min-width: $min-md) {
+    padding: 80px;
+  }
+}
