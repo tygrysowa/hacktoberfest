@@ -1,29 +1,16 @@
-@import "variables.scss";
+@import '_reset.scss';
+@import '_variables.scss';
+@import '_extends.scss';
+@import '_layout.scss';
+
+/* components */
+
+/* sections */
+@import 'sections/_about';
+@import 'sections/_events';
+@import 'sections/_footer';
+@import 'sections/_header';
+@import 'sections/_hero';
+@import 'sections/_partners';
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap');
-
-html {
-  font-family: 'Poppins', sans-serif;
-}
-
-body{
-  background-color: $tertiary-accent-color;
-  text-align: center;
-}
-
-h1 {
-  color: $primary-color;
-}
-
-.mainLogo {
-  margin-top: 3em;
-  margin-bottom: 1em;
-  max-width: 300px;
-}
-
-a, a:visited {
-  color: $primary-accent-color;
-  
-  &:hover{
-    color: $secondary-accent-color
-  }
-}

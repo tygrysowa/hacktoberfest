@@ -1,0 +1,9 @@
+footer {
+  color: white;
+  font-size: $sm-text-size;
+  @include flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  line-height: 80px;
+}

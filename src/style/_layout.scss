@@ -1,0 +1,32 @@
+html {
+  font-family: 'Poppins', sans-serif;
+  font-size: $text-size;
+}
+
+body {
+  background-color: $tertiary-accent-color;
+  text-align: center;
+}
+
+h1 {
+  color: $primary-color;
+}
+
+.mainLogo {
+  margin-top: 3em;
+  margin-bottom: 1em;
+  max-width: 300px;
+}
+
+a,
+a:visited {
+  color: $primary-accent-color;
+
+  &:hover {
+    color: $secondary-accent-color;
+  }
+}
+
+section {
+  @include padding;
+}
