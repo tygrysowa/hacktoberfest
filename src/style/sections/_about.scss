@@ -1,3 +1,35 @@
 .about {
-  background-color: $secondary-accent-color;
+  padding: 0;
+  @media (min-width: $min-md) {
+    display: grid;
+    grid-template-columns: 1.75fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      'first .'
+      'second .';
+    // background-image: url('/assets/img/banner-blank-dark.png');
+    // background-size: contain;
+    // background-repeat: no-repeat;
+    // background-position: right;
+  }
+
+  article {
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: white;
+
+    p {
+      line-height: 1.5rem;
+    }
+  }
+  .first {
+    background-color: $primary-color;
+    grid-area: first;
+  }
+  .second {
+    background-color: $secondary-accent-color;
+    grid-area: second;
+  }
 }

@@ -30,3 +30,10 @@ a:visited {
 section {
   @include padding;
 }
+.title {
+  font-size: $title-size;
+  line-height: 2.25rem;
+  font-weight: bold;
+  letter-spacing: $title-weight;
+  margin-bottom: 4rem;
+}

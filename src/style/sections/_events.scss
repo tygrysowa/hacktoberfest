@@ -1,3 +1,32 @@
 .events {
   background-color: $tertiary-accent-color;
+  text-align: left;
+  .title {
+    color: white;
+  }
+
+  article {
+    margin: 2rem;
+    .top {
+      background-color: $primary-color;
+      padding: 2rem;
+      color: $light-color;
+      h3 {
+        font-size: $subtitle-size;
+      }
+    }
+    .bottom {
+      background-color: $light-color;
+      padding: 2rem;
+    }
+  }
+
+  .image {
+    max-width: 100px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
 }
