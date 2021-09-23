@@ -18,3 +18,8 @@
     padding: 80px;
   }
 }
+
+@mixin link {
+  font-weight: $title-weight;
+  letter-spacing: 2px;
+}

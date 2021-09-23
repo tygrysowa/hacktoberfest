@@ -1,40 +1,68 @@
 .about {
   padding: 0;
-  @media (min-width: $min-md) {
-    // display: grid;
-    // grid-template-columns: 1.75fr 1fr;
-    // grid-template-rows: auto;
-    // grid-template-areas:
-    //   'first .'
-    //   'second .';
-    // background-image: url('/assets/img/banner-blank-dark.png');
-    // background-size: contain;
-    // background-repeat: no-repeat;
-    // background-position: right;
-    .row {
-      display: flex;
-      flex-direction: row;
-      flex: 1;
-    }
-  }
 
   article {
+    @include flex-column;
     padding: 5rem;
-    display: flex;
-    flex-direction: column;
     text-align: left;
     color: white;
 
     p {
       line-height: 1.5rem;
+      margin-bottom: 1rem;
     }
   }
   .first {
     background-color: $secondary-accent-color;
-    grid-area: first;
+    a,
+    a:visited {
+      color: $tertiary-accent-color;
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
   }
   .second {
     background-color: $tertiary-color;
-    grid-area: second;
+  }
+  a,
+  a:visited {
+    color: $secondary-color;
+    @include link;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  .btn-box {
+    padding: 5rem;
+  }
+
+  .lines {
+    position: relative;
+    height: 5rem;
+    width: 100%;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      height: 4px;
+    }
+
+    &::before {
+      width: 30%;
+      background: $secondary-color;
+      top: 1.25rem;
+      left: 1.25rem;
+    }
+    &::after {
+      width: 25%;
+      background: $primary-color;
+      top: 2.15rem;
+      left: 2rem;
+    }
   }
 }

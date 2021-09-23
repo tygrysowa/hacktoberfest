@@ -1,14 +1,9 @@
 .events {
   padding-left: 0;
   padding-right: 0;
-  @media (min-width: $min-md) {
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
-
+  padding-top: 0;
   background-color: $tertiary-accent-color;
   text-align: left;
-
   .circle {
     width: 35px;
     height: 35px;
@@ -30,8 +25,7 @@
     }
   }
   .events-grid {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     position: relative;
 
     @media (min-width: $min-md) {
@@ -69,7 +63,7 @@
   }
 
   .title {
-    color: white;
+    margin-left: 2rem;
   }
 
   article {
@@ -96,6 +90,13 @@
     img {
       width: 100%;
       height: auto;
+    }
+  }
+  @media (min-width: $min-md) {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    .title {
+      margin-left: 0;
     }
   }
 }

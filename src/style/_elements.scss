@@ -10,17 +10,17 @@
   color: #fff;
   outline: transparent !important;
 
-  &:hover{
+  &:hover {
     transform: translateY(1px);
   }
-  &:active{
+  &:active {
     transform: translateY(2px);
   }
-  &:before{
-    content:"";
+  &:before {
+    content: '';
     background: url('/assets/img/discord.svg') center no-repeat;
     background-size: 3em 2em;
-    width: 3em; 
+    width: 3em;
     padding-left: 1em;
 
     position: absolute;
@@ -28,8 +28,25 @@
     bottom: 0;
     left: 0;
   }
-  
+
   @media (max-width: $min-md) {
     width: 100%;
+  }
+}
+
+.logo-sm {
+  max-width: 250px;
+  padding: 1rem;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+
+  img {
+    width: 100%;
+    height: auto;
   }
 }
