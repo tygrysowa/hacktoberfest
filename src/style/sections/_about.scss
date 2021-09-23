@@ -1,19 +1,19 @@
 .about {
   padding: 0;
   @media (min-width: $min-md) {
-    // display: grid;
-    // grid-template-columns: 1.75fr 1fr;
-    // grid-template-rows: auto;
-    // grid-template-areas:
-    //   'first .'
-    //   'second .';
+    display: grid;
+    grid-template-columns: 1.75fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      'first .'
+      'second .';
     // background-image: url('/assets/img/banner-blank-dark.png');
     // background-size: contain;
     // background-repeat: no-repeat;
     // background-position: right;
-    display: flex;
-    flex-direction: row;
-    flex: 1;
+    // display: flex;
+    // flex-direction: row;
+    // flex: 1;
   }
 
   article {
