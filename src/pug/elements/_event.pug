@@ -1,0 +1,16 @@
+mixin event(info)
+  article&attributes(attributes)
+    .circle
+    .box
+      .top
+        h3.sub-title #{info.title}
+        h4.date Kiedy: #{info.date}
+        h4.hours O której: #{info.hours}
+        h4.where Gdzie: #{info.online ? 'Online' : 'Offline + streaming'}
+      if block
+        details.bottom 
+          summary Tematy
+          block
+      else 
+        .bottom
+          +join_discord_button
