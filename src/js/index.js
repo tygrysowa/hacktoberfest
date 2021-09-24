@@ -1,1 +1,4 @@
-console.log("Yo Hackers!");
+window.toggleMenu = function(){
+  document.getElementById("menu")
+    .classList.toggle("expand");
+}

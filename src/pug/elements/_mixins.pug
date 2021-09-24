@@ -1,0 +1,33 @@
+mixin join_discord_button(title="Przyłącz się do nas na Discordzie!")
+  a(href="#")
+    button.btn-discord=title
+
+mixin fancyBox(edges = [])
+    .lines-wrapper
+      .box&attributes(attributes)
+        block
+      if edges.indexOf("top") !== -1
+        .top-lines
+      if edges.indexOf("bottom") !== -1
+        .bottom-lines
+      if edges.indexOf("left") !== -1
+        .left-lines
+      if edges.indexOf("right") !== -1
+        .right-lines
+
+mixin event(info, edges)
+  article
+    .circle
+    +fancyBox(edges)&attributes(attributes)
+      .top
+        h3.sub-title #{info.title}
+        h4.date Kiedy: #{info.date}
+        h4.hours O której: #{info.hours}
+        h4.where Gdzie: #{info.online ? 'Online' : 'Offline + streaming'}
+      if block
+        details.bottom 
+          summary Tematy
+          block
+      else 
+        .bottom
+          +join_discord_button

@@ -1,4 +1,4 @@
-section.events 
+section.events#events
   h2.title Wydarzenia
   .events-grid 
     .image 
@@ -8,7 +8,7 @@ section.events
       date: "09.10.2021",
       hours: "10:00 - 18:00",
       online: false
-    }).first-event
+    }, ["bottom"]).first-event.bradius-tl-lg
       ul
         li Nojas “Moja przygoda z Open Source” (~45 min)
         li DoomHammer “Warsztaty GitHub + Git” (3h) na przykładzie tłumaczeń
@@ -27,35 +27,35 @@ section.events
       date: "12.10.2021",
       hours: "??",
       online: true
-    }).online.lh-1
+    }, ["right"]).online.lh-1.bradius-bl-lg
 
     +event({
       title: "Live-hacking + mentoring",
       date: "14.10.2021",
       hours: "??",
       online: true
-    }).online.lh-2
+    }).online.lh-2.bradius-bl-lg.bradius-tr-lg
     
     +event({
       title: "Live-hacking + mentoring",
       date: "19.10.2021",
       hours: "??",
       online: true
-    }).online.lh-3
+    }, ["left"]).online.lh-3.bradius-br-lg
 
     +event({
       title: "Live-hacking + mentoring",
       date: "21.10.2021",
       hours: "??",
       online: true
-    }).online.lh-4
+    }, ["top", "bottom"]).online.lh-4
 
     +event({
       title: "Hacktoberfest: Hackathon",
       date: "23.10.2021",
       hours: "10.00 - 18.00",
       online: false
-    }).second-event 
+    }).second-event.bradius-tl-lg.bradius-br-lg
       ul 
         li Szymon Moliński “Warsztaty Python & Open Source: jak przygotować, opublikować i utrzymać paczkę na PyPI.”
         li DoomHammer “Docker i kontenery aplikacji” live-hacking/warsztat + prezentacja (1h)
@@ -70,6 +70,4 @@ section.events
       date: "29.10.2021",
       hours: "??",
       online: false
-    }).third-event
-      ul 
-        li Opis
+    }, ["left", "top"]).third-event.bradius-br-lg
