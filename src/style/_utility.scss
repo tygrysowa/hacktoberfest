@@ -10,3 +10,68 @@
     overflow: hidden;
   }
 }
+
+.lines-wrapper {
+  position: relative;
+}
+
+$directions: ("top", "bottom", "left", "right");
+
+@each $dir in $directions {
+  .#{$dir}-lines {
+    $orientation: null;
+    $thickness_prop: null;
+    $length_prop: null;
+    $posx_prop: null;
+    $posy_prop: null;
+    $posx: null;
+    $posy: null;
+    $offset: 8px;
+
+    @if $dir == "top" or $dir == "bottom" {
+      $thickness_prop: "width";
+      $length_prop: "height";
+      $posy_prop: "bottom";
+      $posx_prop: "left";
+      $posy: $offset;
+      $posx: 0;
+    } @else {
+      $thickness_prop: "height";
+      $length_prop: "width";
+      $posy_prop: "bottom";
+      $posx_prop: "right";
+      $posy: 0;
+      $posx: $offset;
+    }
+
+    @if $dir == "top" {
+      $posy_prop: "top";
+      $posx_prop: "right";
+    }
+    
+    @if $dir == "left" {
+      $posy_prop: "top";
+      $posx_prop: "left";
+    }
+    
+    content: "";
+    position: absolute;
+    background-color: $primary-color;
+    #{$thickness_prop}: 30%;
+    #{$length_prop}: 4px;
+    #{$posy_prop}: -2 * $posy;
+    #{$posx_prop}: -2 * $posx;
+    border-radius: $offset;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: $secondary-color;
+      #{$thickness_prop}: 150%;
+      #{$length_prop}: 4px;
+      #{$posy_prop}: $posy;
+      #{$posx_prop}: $posx;
+      border-radius: $offset;
+    }
+  }
+}

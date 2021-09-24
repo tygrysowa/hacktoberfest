@@ -1,7 +1,6 @@
 @import '_reset.scss';
 @import '_variables.scss';
 @import '_extends.scss';
-@import '_utility.scss';
 @import '_layout.scss';
 
 /* components */
@@ -14,5 +13,7 @@
 @import 'sections/_header';
 @import 'sections/_hero';
 @import 'sections/_partners';
+
+@import '_utility.scss';
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap');
