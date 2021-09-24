@@ -1,11 +1,8 @@
 extends ./pug/_layout
 
-block content 
-  include pug/sections/_header
-  main 
+block content
+  main
     include pug/sections/_hero 
     include pug/sections/_about
-    include pug/sections/_events 
-    include pug/sections/_partners   
-  include pug/sections/_footer
-  script(src="/js/index.js")
+    include pug/sections/_events
+    include pug/sections/_partners
