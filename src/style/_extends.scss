@@ -19,6 +19,13 @@
   }
 }
 
+@mixin padding-articles {
+  padding: 4rem 2rem;
+  @media screen and (min-width: $min-md) {
+    padding: 5rem;
+  }
+}
+
 @mixin link {
   font-weight: $title-weight;
   letter-spacing: 2px;

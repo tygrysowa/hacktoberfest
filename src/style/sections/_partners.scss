@@ -7,7 +7,7 @@
 
   article {
     @include flex-column;
-    padding: 5rem;
+    @include padding-articles;
     text-align: left;
     color: $tertiary-accent-color;
     background-color: $light-color;
