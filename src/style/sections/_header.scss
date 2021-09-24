@@ -2,4 +2,21 @@ header {
   color: white;
   height: 80px;
   line-height: 80px;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    max-width: 80%;
+    margin: auto;
+
+    li {
+      display: inline-block;
+      margin: auto 1em;
+
+      &:first-child {
+        flex-grow: 1;
+        text-align: start;
+      }
+    }
+  }
 }
