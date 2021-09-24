@@ -23,11 +23,20 @@ $max-xs: 575.99px;
 
 $min-sm: 576px;
 $max-sm: 767.99px;
-
 $min-md: 768px;
-
 $min-lg: 960px;
-
 $min-xl: 1200px;
-
 $min-xxl: 1500px;
+
+$corners: (
+  "bl": "bottom-left",
+  "br": "bottom-right",
+  "tl": "top-left",
+  "tr": "top-right",
+);
+
+$sizes: (
+  "sm": 1em,
+  "md": 2em,
+  "lg": 3em
+);

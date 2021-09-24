@@ -1,0 +1,12 @@
+@each $s, $size in $sizes {
+  @each $c, $corner in $corners {
+    .bradius-#{$c}-#{$s} {
+      border-#{$corner}-radius: $size;
+      overflow: hidden;
+    }
+  }
+  .bradius-#{$s} {
+    border-radius: $size;
+    overflow: hidden;
+  }
+}
