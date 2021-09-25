@@ -1,5 +1,5 @@
 mixin join_discord_button(title="Przyłącz się do nas na Discordzie!")
-  a(href="#")
+  a(href="https://discord.com/invite/C7b4JNvw3a", target="_blank")
     button.btn-discord=title
 
 mixin fancyBox(edges = [])
@@ -26,8 +26,16 @@ mixin event(info, edges)
         h4.where Gdzie: #{info.online ? 'Online' : 'Offline + streaming'}
       if block
         details.bottom 
-          summary Tematy
+          summary Agenda
           block
       else 
         .bottom
           +join_discord_button
+
+
+
+
+mixin logo(url, name, alt, loading)
+  .logo-sm 
+    a(href=url, target="_blank")  
+      img(src="/assets/img/" + name, alt=alt, loading="lazy")

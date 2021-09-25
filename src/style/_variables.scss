@@ -12,8 +12,8 @@ $light-color: #dbe8d9;
 $br-radius: 0.5rem;
 
 /* fonts */
-$sm-text-size: 14px;
-$text-size: 18px;
+$sm-text-size: 1rem;
+$text-size: 1.15rem;
 $title-size: 1.875rem;
 $subtitle-size: 1.5rem;
 $title-weight: bold;
@@ -29,14 +29,14 @@ $min-xl: 1200px;
 $min-xxl: 1500px;
 
 $corners: (
-  "bl": "bottom-left",
-  "br": "bottom-right",
-  "tl": "top-left",
-  "tr": "top-right",
+  'bl': 'bottom-left',
+  'br': 'bottom-right',
+  'tl': 'top-left',
+  'tr': 'top-right',
 );
 
 $sizes: (
-  "sm": 1em,
-  "md": 2em,
-  "lg": 3em
+  'sm': 1em,
+  'md': 2em,
+  'lg': 3em,
 );

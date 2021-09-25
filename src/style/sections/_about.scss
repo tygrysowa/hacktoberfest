@@ -1,40 +1,74 @@
 .about {
   padding: 0;
-  @media (min-width: $min-md) {
-    // display: grid;
-    // grid-template-columns: 1.75fr 1fr;
-    // grid-template-rows: auto;
-    // grid-template-areas:
-    //   'first .'
-    //   'second .';
-    // background-image: url('/assets/img/banner-blank-dark.png');
-    // background-size: contain;
-    // background-repeat: no-repeat;
-    // background-position: right;
-    .row {
-      display: flex;
-      flex-direction: row;
-      flex: 1;
-    }
-  }
 
   article {
-    padding: 5rem;
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
+    @include padding-articles;
+
     text-align: left;
     color: white;
-
-    p {
-      line-height: 1.5rem;
-    }
   }
   .first {
     background-color: $secondary-accent-color;
-    grid-area: first;
+    a,
+    a:visited {
+      color: $tertiary-accent-color;
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
   }
   .second {
     background-color: $tertiary-color;
-    grid-area: second;
+  }
+  a,
+  a:visited {
+    color: $secondary-color;
+    @include link;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  .btn-box {
+    padding: 3rem;
+    border-radius: 10px;
+    background: $primary-accent-color;
+    max-width: 550px;
+    margin: 0 auto;
+  }
+
+  .lines {
+    position: relative;
+    height: 2rem;
+    width: 100%;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      height: 4px;
+    }
+
+    &::before {
+      width: 30%;
+      background: $secondary-color;
+      top: 0.5rem;
+      left: 1.25rem;
+    }
+    &::after {
+      width: 25%;
+      background: $primary-color;
+      top: 1rem;
+      left: 2rem;
+    }
+  }
+  .subtitle {
+    font-size: $subtitle-size;
+    letter-spacing: 1px;
+    color: $primary-accent-color;
+    margin-bottom: 3rem;
   }
 }

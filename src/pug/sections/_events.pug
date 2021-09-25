@@ -10,17 +10,24 @@ section.events#events
       online: false
     }, ["bottom"]).first-event.bradius-tl-lg
       ul
-        li Nojas “Moja przygoda z Open Source” (~45 min)
-        li DoomHammer “Warsztaty GitHub + Git” (3h) na przykładzie tłumaczeń
+        li 
+          span.author Nojas 
+          |
+          span.presentation “Moja przygoda z Open Source” (~45 min)
+        li 
+          span.author Piotr Gaczkowski 
+          span.presentation “Warsztaty GitHub + Git” (3h) na przykładzie tłumaczeń
         li Prezentacje naszych projektów (po 15 min):
-          ul 
+          ol(style="padding-left: 3rem;")
             li PyInterpolate
             li Robocop
             li Orpheus
             li Żeton
             li Kalendarz HS3
             li bot PAN Kreator
-          li Hackathon ~14:00-18:00
+          li 
+            span.author Hackathon
+            span.presentation  godz. 14:00-18:00
 
     +event({
       title: "Live-hacking + mentoring",
@@ -57,13 +64,30 @@ section.events#events
       online: false
     }).second-event.bradius-tl-lg.bradius-br-lg
       ul 
-        li Szymon Moliński “Warsztaty Python & Open Source: jak przygotować, opublikować i utrzymać paczkę na PyPI.”
-        li DoomHammer “Docker i kontenery aplikacji” live-hacking/warsztat + prezentacja (1h)
-        li BYĆ MOŻE: DoomHammer “CI/CD z GitHub” live-hacking/warsztat
-        li PyInterpolate
-        li Piotr Suwała “Błędy są super: Jak uczyć się na swoich błędach i wcielać to w życie” 30-45min
+        li
+          span.author Szymon Moliński 
+          |
+          span.presentation “Warsztaty Python & Open Source: jak przygotować, opublikować i utrzymać paczkę na PyPI.”
+        li 
+          span.author Piotr Gaczkowski
+          |
+          span.presentation “Docker i kontenery aplikacji” live-hacking/warsztat + prezentacja (1h)
+        li 
+          span.author BYĆ MOŻE: Piotr Gaczkowski 
+          |
+          span.presentation “CI/CD z GitHub” live-hacking/warsztat
+        li
+          span.author Szymon Moliński 
+          |
+          span.presentation PyInterpolate
+        li 
+          span.author Piotr Suwała 
+          |
+          span.presetnation “Błędy są super: Jak uczyć się na swoich błędach i wcielać to w życie” (30-45min)
             
-        li Hackathon 13:00-18:00
+        li 
+          span.author Hackathon 
+          span.presentation godz. 13:00-18:00
 
     +event({
       title: "Hacktoberfest: Piknik",
@@ -71,3 +95,5 @@ section.events#events
       hours: "??",
       online: false
     }, ["left", "top"]).third-event.bradius-br-lg
+      ul 
+        
