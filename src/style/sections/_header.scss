@@ -49,6 +49,7 @@ header {
       top: 0;
       text-align: start;
       width: fit-content;
+      @include link;
     }
     
     .hamburger {
