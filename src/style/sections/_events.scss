@@ -85,6 +85,31 @@
       color: $light-color;
       h3 {
         font-size: $subtitle-size;
+        margin-bottom: 0.3rem;
+      }
+      h4 {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        line-height: 1.6;
+        align-items: center;
+        letter-spacing: 1px;
+      }
+      .date span,
+      .hours span,
+      .where span {
+        display: block;
+        width: fit-content;
+        background-color: $tertiary-accent-color;
+        padding: 0.25rem 0.5rem;
+        border-radius: $br-radius;
+        margin-top: 0.3rem;
+        margin-bottom: 0.3rem;
+      }
+      .hours span {
+        background-color: $tertiary-color;
+      }
+      .where span {
+        background-color: $primary-accent-color;
       }
     }
     .bottom {
@@ -123,6 +148,10 @@
 
 .box {
   border-radius: 5px;
+}
+
+.online .where span {
+  background-color: $secondary-color !important;
 }
 @media (min-width: $min-md) {
   article {

@@ -3,9 +3,6 @@
   padding: 0;
   .title {
     margin-left: 2rem;
-    @media (min-width: $min-md) {
-      margin-left: 5rem;
-    }
   }
   .row {
     @media (min-width: $min-md) {
@@ -23,7 +20,6 @@
   }
 
   article:first-child {
-    
     @include background-links($secondary-color, $invert: true);
     color: white;
   }
