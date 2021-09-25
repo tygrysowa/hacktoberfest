@@ -3,6 +3,9 @@
   padding: 0;
   .title {
     margin-left: 2rem;
+    @media (min-width: $min-md) {
+      margin-left: 0;
+    }
   }
   .row {
     @media (min-width: $min-md) {
