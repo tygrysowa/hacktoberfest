@@ -3,7 +3,12 @@ header {
   max-height: 80px;
   line-height: 80px;
   overflow: hidden;
-  
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: $tertiary-accent-color;
+  z-index: 99;
+
   &.expand {
     max-height: none;
     line-height: 40px;
@@ -22,7 +27,7 @@ header {
     margin: auto;
     text-align: right;
     position: relative;
-    
+
     @media screen and (max-width: $min-xl) {
       max-width: 100%;
     }
@@ -31,7 +36,7 @@ header {
       display: inline-block;
       width: fit-content;
       margin: auto 1em;
-      
+
       @media screen and (max-width: $min-lg) {
         display: block;
         text-align: center;
@@ -51,7 +56,7 @@ header {
       width: fit-content;
       @include link;
     }
-    
+
     .hamburger {
       display: none;
       position: absolute;
@@ -59,7 +64,7 @@ header {
       top: 0;
       text-align: end;
       width: fit-content;
-      
+
       @media screen and (max-width: $min-lg) {
         display: block;
       }
