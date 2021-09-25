@@ -9,27 +9,10 @@
     color: white;
   }
   .first {
-    background-color: $secondary-accent-color;
-    a,
-    a:visited {
-      color: $tertiary-accent-color;
-
-      &:hover {
-        color: $secondary-color;
-      }
-    }
+    @include background-links($secondary-accent-color, $invert: true);
   }
   .second {
-    background-color: $tertiary-color;
-  }
-  a,
-  a:visited {
-    color: $secondary-color;
-    @include link;
-
-    &:hover {
-      color: $primary-color;
-    }
+    @include background-links($tertiary-color);
   }
 
   .btn-box {
