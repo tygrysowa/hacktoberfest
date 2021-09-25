@@ -1,8 +1,17 @@
 .partners {
   text-align: left;
-  padding-left: 0;
+  padding: 0;
   .title {
-    margin-left: 5rem;
+    margin-left: 2rem;
+    @media (min-width: $min-md) {
+      margin-left: 5rem;
+    }
+  }
+  .row {
+    @media (min-width: $min-md) {
+      padding-left: 0;
+      padding-right: 5rem;
+    }
   }
 
   article {
@@ -11,13 +20,10 @@
     text-align: left;
     color: $tertiary-accent-color;
     background-color: $light-color;
+
     a,
     a:visited {
       @include link;
-    }
-    p {
-      line-height: 1.5rem;
-      margin-bottom: 1rem;
     }
   }
 
@@ -26,9 +32,38 @@
     color: white;
     a,
     a:visited {
-      color: $tertiary-accent-color;
+      color: $light-color;
       &:hover {
         color: $primary-color;
+      }
+    }
+  }
+
+  article:nth-child(2) {
+    @media (min-width: $min-md) {
+      position: relative;
+      &::before,
+      &::after {
+        position: absolute;
+        content: '';
+        background: transparent;
+        z-index: -1;
+      }
+      &::before {
+        width: 250px;
+        height: 200px;
+        border-bottom: 4px solid $primary-color;
+        border-right: 4px solid $primary-color;
+        bottom: -8px;
+        right: -8px;
+      }
+      &::after {
+        width: 180px;
+        height: 150px;
+        border-bottom: 4px solid $secondary-color;
+        border-right: 4px solid $secondary-color;
+        bottom: -16px;
+        right: -16px;
       }
     }
   }

@@ -1,9 +1,12 @@
 footer {
-  color: white;
+  color: $light-color;
   font-size: $sm-text-size;
-  @include flex;
+  @include flex-column;
   justify-content: center;
   align-items: center;
-  height: 80px;
-  line-height: 80px;
+  padding-top: 5rem;
+
+  img {
+    max-width: 350px;
+  }
 }

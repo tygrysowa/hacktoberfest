@@ -1,31 +1,17 @@
 .events {
   padding-left: 0;
   padding-right: 0;
-  padding-top: 0;
+  @media (min-width: $min-md) {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
   background-color: $tertiary-accent-color;
   text-align: left;
-  .circle {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    background: $primary-color;
-    position: relative;
-    margin: 0 auto 1.5rem;
 
-    &::after {
-      width: 50%;
-      height: 50%;
-      position: absolute;
-      content: '';
-      background: $tertiary-accent-color;
-      border-radius: 50%;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-  }
   .events-grid {
-    @include flex-column;
+    display: flex;
+    flex-direction: column;
     position: relative;
 
     @media (min-width: $min-md) {
@@ -35,6 +21,21 @@
         margin: 0 auto 1.5rem 45px;
         width: 50px;
         height: 50px;
+        border-radius: 50%;
+        background: $primary-color;
+        position: relative;
+
+        &::after {
+          width: 50%;
+          height: 50%;
+          position: absolute;
+          content: '';
+          background: $tertiary-accent-color;
+          border-radius: 50%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
       }
 
       &::before {
@@ -49,9 +50,14 @@
 
       article {
         display: grid;
-        grid-template-columns: 250px auto;
+        grid-template-columns: 200px auto;
         margin-left: 0;
         align-items: center;
+      }
+      @media (min-width: $min-lg) {
+        article {
+          grid-template-columns: 250px auto;
+        }
       }
 
       .image {
@@ -63,7 +69,11 @@
   }
 
   .title {
+    color: white;
     margin-left: 2rem;
+    @media (min-width: $min-md) {
+      margin-left: 5rem;
+    }
   }
 
   article {
@@ -79,6 +89,18 @@
     .bottom {
       background-color: $light-color;
       padding: 2rem;
+      ul {
+        padding-left: 0.25rem;
+        li {
+          line-height: 2;
+        }
+      }
+      ol {
+        list-style: decimal;
+      }
+      .author {
+        font-weight: $title-weight;
+      }
     }
   }
 
@@ -92,15 +114,23 @@
       height: auto;
     }
   }
-  @media (min-width: $min-md) {
-    padding-left: 5rem;
-    padding-right: 5rem;
-    .title {
-      margin-left: 0;
-    }
-  }
 }
 
 .box {
   border-radius: 5px;
+}
+@media (min-width: $min-md) {
+  article {
+    grid-template-rows: 150px 1fr;
+    grid-template-areas:
+      'circle wrapper'
+      '. wrapper';
+
+    .circle {
+      grid-area: circle;
+    }
+    .lines-wrapper {
+      grid-area: wrapper;
+    }
+  }
 }
