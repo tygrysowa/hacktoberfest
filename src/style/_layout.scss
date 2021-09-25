@@ -1,5 +1,6 @@
 html {
   font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -48,9 +49,9 @@ section {
   text-decoration: underline;
   text-decoration-color: $primary-color;
   text-align: center;
-  
-  &::before{
-    content: "";
+
+  &::before {
+    content: '';
     display: block;
     width: 100%;
     height: 150px;
