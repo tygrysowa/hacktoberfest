@@ -19,24 +19,13 @@
     @include padding-articles;
     text-align: left;
     color: $tertiary-accent-color;
-    background-color: $light-color;
-
-    a,
-    a:visited {
-      @include link;
-    }
+    @include background-links($light-color, 45%, 70%);
   }
 
   article:first-child {
-    background-color: $secondary-color;
+    
+    @include background-links($secondary-color, $invert: true);
     color: white;
-    a,
-    a:visited {
-      color: $light-color;
-      &:hover {
-        color: $primary-color;
-      }
-    }
   }
 
   article:nth-child(2) {
