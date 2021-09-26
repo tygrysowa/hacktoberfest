@@ -1,0 +1,22 @@
+extends ./pug/_layout
+
+block content
+  h1 Zasoby
+  a(href="/index.pug") Back to Home
+
+  section.resources
+    +fancyBox(["top", "left"])
+      article 
+        h1 Siemka
+    +fancyBox(["bottom", "left"])
+      article 
+        h1 Siemka
+    +fancyBox(["bottom"])
+      article 
+        h1 Siemka
+    +fancyBox(["top", "right"])
+      article 
+        h1 Siemka
+    +fancyBox(["top", "bottom"])
+      article 
+        h1 Siemka
