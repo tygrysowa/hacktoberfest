@@ -1,5 +1,6 @@
 .about {
   padding: 0;
+  padding-top: 80px;
 
   article {
     @include flex-column;
@@ -17,11 +18,12 @@
 
   .btn-box {
     @include link;
-    
+
     position: relative;
     display: block;
     border-radius: 10px;
-    background: $primary-accent-color url('/assets/img/discord-btn-bg.png') center no-repeat;;
+    background: $primary-accent-color url('/assets/img/discord-btn-bg.png')
+      center no-repeat;
     color: $tertiary-accent-color;
     max-width: 550px;
     padding: 3rem;
