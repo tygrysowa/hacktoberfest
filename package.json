@@ -9,7 +9,7 @@
     "build-dev": "parcel build src/index.pug --no-minify"
   },
   "keywords": [],
-  "author": "Grzegorz Kupczyk",
+  "authors": "Grzegorz Kupczyk & Magdalena Rosłaniec",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "9.8.6",

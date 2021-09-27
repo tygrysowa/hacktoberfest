@@ -53,8 +53,13 @@ header {
       left: 0;
       top: 0;
       text-align: start;
-      width: fit-content;
+      height: 90px;
+      width: 80px;
       @include link;
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
 
     .hamburger {
