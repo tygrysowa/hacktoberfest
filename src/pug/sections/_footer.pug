@@ -1,3 +1,41 @@
 footer 
+  .all-logos 
+    -
+      var logos =[
+          {
+            url: "https://hs3.pl/",
+            name: "HS_LOGO_COLOR_TROJMIASTO.png", 
+            alt: "Logo Hackerspace Trójmiasto"
+          },
+          {
+            url: "https://mvpmatch.co/for-freelancers",
+            name: "match_logo_white_print.svg", 
+            alt: "Logo MVP Match"
+          },
+          {
+            url: "https://sarigato.org/",
+            name: "Fundacja_Sarigato_logo.png", 
+            alt: "logo Fundacji Sarigato"
+          },
+          {
+            url: "https://hakersi.pl/",
+            name: "Hakersi_logo_on_light_1.png", 
+            alt: "logo Hakersi"
+          },
+          {
+            url: "https://codeme.pl/",
+            name: "codeme_logo_white_red_subtitle_white_rgb.png", 
+            alt: "logo Code:Me"
+          },
+          {
+            url: "",
+            name: "logo_starter.png", 
+            alt: "logo Starter"
+          },
+          
+        ];
+    each logo in logos
+      +logo(logo.url, logo.name, logo.alt)
+
   img.mainLogo(src="/assets/img/footer-simple-dark.png" alt="H letter - Hacktoberfest logo")
   p @2021 Hackerspace Trójmiasto
