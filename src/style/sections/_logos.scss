@@ -1,0 +1,29 @@
+#logos {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 3rem;
+  @media (min-width: $min-md) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  margin-top: 5rem;
+  justify-content: space-evenly;
+  align-items: center;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+  .logo-sm {
+    &:nth-child(7) {
+      padding: 0;
+      margin: 3rem 0.25rem;
+      width: 270px;
+    }
+    &:last-child {
+      padding: 0 3rem;
+    }
+  }
+}

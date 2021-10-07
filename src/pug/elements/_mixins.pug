@@ -15,18 +15,32 @@ mixin fancyBox(edges = [])
       if edges.indexOf("right") !== -1
         .right-lines
 
-mixin event(info, edges)
+mixin event(info, edges, data)
   article
     .circle
     +fancyBox(edges)&attributes(attributes)
       .top
-        h3.sub-title #{info.title}
-        h4.date Kiedy: 
-          span #{info.date}
-        h4.hours O której: 
-          span #{info.hours}
-        h4.where Gdzie: 
-          span #{info.online ? 'Online' : 'Offline + streaming'}
+        .top__left 
+          h3.sub-title #{info.title}
+          h4.date Kiedy: 
+            span #{info.date}
+          h4.hours O której: 
+            span #{info.hours}
+          h4.where Gdzie: 
+            span #{info.online ? 'Online' : 'Offline + streaming'}
+        if info.title === 'Hacktoberfest: wprowadzenie'       
+          .top__right
+          
+            h3.offline-info Wydarzenie offline będzie odbywało się w:
+              address
+                p Gdańskim Inkubatorze Przedsiębiorczości STARTER
+                p ul. Lęborska 3b
+                p 80-386 Gdańsk
+              h4(style="font-size: 1.25rem; font-weight: bold")   
+                a(href="https://www.meetup.com/pl-PL/hs3city/events/281191703/") 
+                  button.btn-meetup Zapisy
+            
+
       if block
         details.bottom 
           summary Agenda
@@ -38,7 +52,7 @@ mixin event(info, edges)
 
 
 
-mixin logo(url, name, alt, loading)
-  .logo-sm 
-    a(href=url, target="_blank")  
-      img(src="/assets/img/" + name, alt=alt, loading="lazy")
+mixin logo(url, name, alt, loading, className)  
+  a(href=url, target="_blank")  
+    img(src="/assets/img/" + name, alt=alt, loading="lazy")
+

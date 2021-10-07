@@ -1,4 +1,4 @@
-@use "sass:color";
+@use 'sass:color';
 
 @mixin flex {
   display: flex;
@@ -33,10 +33,11 @@
   letter-spacing: 2px;
 }
 
-@mixin background-links($color, $ratio: 25%, $ratiohover: 40%, $invert: false){
+@mixin background-links($color, $ratio: 25%, $ratiohover: 40%, $invert: false) {
   background-color: $color;
 
-  a, a:visited {
+  a,
+  a:visited {
     @if $invert {
       color: lighten($color, $ratio);
     } @else {
@@ -45,7 +46,8 @@
     @include link;
   }
 
-  a:hover, a:active {
+  a:hover,
+  a:active {
     @if $invert {
       color: lighten($color, $ratiohover);
     } @else {

@@ -1,0 +1,53 @@
+section#logos 
+    -
+      var logos =[
+          {
+            url: "https://hs3.pl/",
+            name: "hs3_default_black.svg", 
+            alt: "Logo Hackerspace Trójmiasto"
+          },
+          {
+            url: "https://mvpmatch.co/for-freelancers",
+            name: "rsz_logos_dark.png", 
+            alt: "Logo MVP Match"
+            
+          },
+          {
+            url: "https://sarigato.org/",
+            name: "Fundacja_Sarigato_logo.png", 
+            alt: "logo Fundacji Sarigato"
+          },
+          {
+            url: "https://hakersi.pl/",
+            name: "Hakersi_logo_on_light_1.png",
+            alt: "logo Hakersi"
+          },
+          {
+            url: "https://codeme.pl/",
+            name: "codeme_logo_black_red_subtitle_black_rgb.png", 
+            alt: "logo Code:Me"
+          },
+          {
+            url: "https://inkubatorstarter.pl/",
+            name: "logo_starter.png", 
+            alt: "logo Starter"
+          },
+           {
+            url: "https://www.strefa.gda.pl/",
+            name: "PSI_PSSE.png", 
+            alt: "logo Polska Strefa Inwestycyjna - Pomorska Specjalna Strefa Ekonomiczna"
+          },
+           {
+            url: "https://gpnt.pl/",
+            name: "GPNT_logo_CMYK.png", 
+            alt: "logo Gdański Park Naukowo-Technologiczny"
+          },
+            {
+            url: "https://ikm.gda.pl/",
+            name: "instytutkulturymiejskiej.png", 
+            alt: "logo Instytutu Kultury Miejskiej"
+          }     
+        ];
+    each logo in logos
+      .logo-sm
+        +logo(logo.url, logo.name, logo.alt)

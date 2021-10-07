@@ -5,4 +5,11 @@ footer {
   justify-content: center;
   align-items: center;
   padding-top: 5rem;
+
+  .all-logos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 5rem 0;
+  }
 }
